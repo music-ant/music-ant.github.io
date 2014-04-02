@@ -1,0 +1,11 @@
+<VirtualHost *:80>
+    ServerAlias music-ant.local
+    SetEnv STAGE testing
+
+    DocumentRoot %webdir%
+
+    <Directory %webdir%>
+        AllowOverride None
+    </Directory>
+
+</VirtualHost>

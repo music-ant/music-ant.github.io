@@ -1,0 +1,21 @@
+{
+    "name": "alwmar/music-ant.github.io",
+    "description": "Website of music-ant.com",
+    "require-dev": {
+        "behat/behat": "*",
+        "behat/mink-extension": "*",
+        "behat/mink-selenium2-driver": "*",
+        "behat/mink-goutte-driver": "*"
+    },
+    "license": "MPL 2.0",
+    "authors": [
+        {
+            "name": "Alwin Mark",
+            "email": "alwin@music-ant.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+
+    }
+}

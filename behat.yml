@@ -1,0 +1,9 @@
+default:
+
+  extensions:
+    Behat\MinkExtension\Extension:
+      base_url: 'http://music-ant.local'
+      default_session: goutte
+      javascript_session: selenium2
+      selenium2: ~
+      goutte: ~
