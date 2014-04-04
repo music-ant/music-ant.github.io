@@ -16,15 +16,21 @@ matrix:
    - php: hhvm
 
 before_script:
+  - gem install jekyll
+  - jekyll build
+  - cd tests
   - composer self-update
   - composer install --prefer-source --no-interaction --no-progress
+  - cd ..
 
   - sudo apt-get update
   - sudo apt-get install -y --force-yes apache2 libapache2-mod-php5
-  - sudo cp $(pwd)/features/bootstrap/music-ant.local /etc/apache2/sites-enabled
-  - sudo sed -i -e "s,%webdir%,$(pwd),g" /etc/apache2/sites-enabled/music-ant.local
+  - sudo cp $(pwd)/tests/features/bootstrap/music-ant.local /etc/apache2/sites-enabled
+  - sudo sed -i -e "s,%webdir%,$(pwd)/_site,g" /etc/apache2/sites-enabled/music-ant.local
   - sudo /etc/init.d/apache2 restart
   - echo "127.0.0.1 music-ant.local" | sudo tee -a /etc/hosts
 
 script:
+  - cd tests
   - vendor/bin/behat
+  - cd ..
