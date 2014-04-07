@@ -7,6 +7,4 @@ Scenario: Website is available
 
 Scenario: Landing Page should show some Content
   When I go to the homepage
-  Then I should see "Fuck Gema, love music!"
-  And  I should see "wanna know what a music ant is?"
-  And  I should see "wanna be a music ant?"
+  Then I should see "Share to show your Love"
